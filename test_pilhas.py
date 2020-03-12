@@ -200,10 +200,10 @@ Sua função deve retornar a ultima pilha
 def menos_o_d(texto):
     pilha_l1 = []
     for letra in texto:
-        if len(pilha_l1) == 0 and letra == 'd':
-            fotografa(pilha_l1)
-        elif letra == "d":
+        if letra == "d" and len(pilha_l1) != 0:
             pilha_l1.pop()
+            fotografa(pilha_l1)
+        elif letra == "d" and len(pilha_l1) == 0:
             fotografa(pilha_l1)
         else:
             pilha_l1.append(letra)
@@ -239,10 +239,9 @@ Faça uma função encaixa, que recebe duas strings, um "abre" e um "fecha", e r
 True se eles encaixam (False se não encaixarem)
 '''
 def encaixa(abre, fecha):
-    if abre == "(" and fecha == ")" or abre == "[" and fecha == "]" or abre == "{" and fecha == "}":
+    if (abre == "(" and fecha == ")") or (abre == "[" and fecha == "]") or (abre == "{" and fecha == "}"):
         return True
-    else:
-        return False
+    return False
 
 '''
 EXPLICACAO
@@ -298,7 +297,7 @@ O que está na pilha, quando o algoritmo lê a letra "a"?
 
 Responda na variável pilha_balanceada1
 '''
-pilha_balanceada1=["(", "(", "{"]
+pilha_balanceada1=[]
 '''
 EXERCICIO
 
@@ -308,7 +307,7 @@ O que está na pilha, quando o algoritmo lê a letra "a"?
 
 Responda na variável pilha_balanceada2
 '''
-pilha_balanceada2=["("]
+pilha_balanceada2=[]
 '''
 EXERCICIO
 
@@ -318,7 +317,7 @@ O que está na pilha, quando o algoritmo lê a letra "a"?
 
 Responda na variável pilha_balanceada3
 '''
-pilha_balanceada3=["(", "{"]
+pilha_balanceada3=[]
 
 '''
 EXERCICIO
@@ -336,7 +335,7 @@ Não precisa se preocupar com nenhum outro caractere
 
 
 def balanceada(string):
-
+    pass #outro pass pra vc tirar e escrever uma função
 '''
 EXERCICIO
 
@@ -735,4 +734,4 @@ def explica_erro(album1,album2):
 
 if __name__ == "__main__":
     teste = runTests()
-    print(menos_o_d("sandalha"))
+    print(menos_o_d("addd"))
