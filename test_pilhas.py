@@ -336,7 +336,7 @@ Não precisa se preocupar com nenhum outro caractere
 
 
 def balanceada(string):
-
+    pass
 '''
 EXERCICIO
 
@@ -417,13 +417,16 @@ class Pilha():
         return self.lista.pop()
 
     def tamanho(self):
-        pass #implemente!
+        return len(self.lista)
 
     def top(self):
-        pass #implemente!
+        return self.lista[len(self.lista)-1]
 
     def vazia(self):
-        pass #implemente!
+        if self.lista == []:
+            return True
+        else:
+            return False
 
 '''
     Veja abaixo como usar os métodos já fornecidos
