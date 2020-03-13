@@ -1,3 +1,7 @@
+'''
+emails: guilherme.asantos@aluno.faculdadeimpacta.com.br RA: 1900785
+        guilherme.dalbuquerque@aluno.faculdadeimpacta.com.br RA: 1900823
+'''
 
 '''
 EXPLICACAO
@@ -386,7 +390,12 @@ dicas:
 
 '''
 def palindromo(string):
-    return True
+    lista_c = list(string)
+    lista_c.reverse()
+    if lista_c == list(string):
+        return True
+    else:
+        return False
 
 '''
 EXERCICIO
@@ -410,7 +419,7 @@ class Pilha():
     def __init__(self):
         self.lista = []
 
-    def push(self,elemento):
+    def push(self, elemento):
         self.lista.append(elemento)
 
     def pop(self):
@@ -738,4 +747,3 @@ def explica_erro(album1,album2):
 
 if __name__ == "__main__":
     teste = runTests()
-    print(menos_o_d("sandalha"))
