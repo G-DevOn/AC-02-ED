@@ -390,9 +390,19 @@ dicas:
 
 '''
 def palindromo(string):
-    lista_c = list(string)
-    lista_c.reverse()
-    if lista_c == list(string):
+    elementos = list(string)
+    if len(elementos) % 2 != 0:
+        del(elementos[int(len(elementos)/2)])
+    pilha = []
+    pilha_b = list(range(int(len(elementos)/2)))
+    prox_e = int(len(elementos)/2)
+    for element in range(int(len(elementos)/2)):
+        pilha.append(elementos[element])
+    for vez in pilha_b:
+        if pilha[len(pilha)-1] == elementos[prox_e]:
+            pilha.pop()
+            prox_e += 1
+    if pilha == []:
         return True
     else:
         return False
