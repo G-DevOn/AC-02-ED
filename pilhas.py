@@ -302,7 +302,7 @@ O que está na pilha, quando o algoritmo lê a letra "a"?
 
 Responda na variável pilha_balanceada1
 '''
-pilha_balanceada1=["(", "(", "{"]
+pilha_balanceada1 = ["(", "(", "{"]
 '''
 EXERCICIO
 
@@ -312,7 +312,7 @@ O que está na pilha, quando o algoritmo lê a letra "a"?
 
 Responda na variável pilha_balanceada2
 '''
-pilha_balanceada2=["("]
+pilha_balanceada2 = ["("]
 '''
 EXERCICIO
 
@@ -322,7 +322,7 @@ O que está na pilha, quando o algoritmo lê a letra "a"?
 
 Responda na variável pilha_balanceada3
 '''
-pilha_balanceada3=["(", "{"]
+pilha_balanceada3 = ["(", "{"]
 
 '''
 EXERCICIO
@@ -340,7 +340,24 @@ Não precisa se preocupar com nenhum outro caractere
 
 
 def balanceada(string):
-    pass
+    pilha = []
+    for element in string:
+        if element not in "()[]{}<>":
+            pass
+        elif element in "([{<":
+            pilha.append(element)
+        else:
+            if pilha == [] and element in ")]}>":
+                return False
+            else:
+                u_e = pilha[-1]
+                if element == ")" and u_e == "(" or element == "]" and u_e == "[" or element == "}" and u_e == "{" or element == ">" and u_e == "<":
+                    pilha.pop()
+    if len(pilha) == 0:
+        return True
+    else:
+        return False
+
 '''
 EXERCICIO
 
