@@ -1,9 +1,4 @@
 '''
-emails: guilherme.asantos@aluno.faculdadeimpacta.com.br RA: 1900785
-        guilherme.dalbuquerque@aluno.faculdadeimpacta.com.br RA: 1900823
-'''
-
-'''
 EXPLICACAO
 Uma pilha é uma estrutura de dados que tem um "topo".
 
